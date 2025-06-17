@@ -19,7 +19,6 @@ The app features:
 
 ## Screenshots:
 
-1. **Dashboard**
    ![Dashboard](screenshots/dashboard.png)
 ---
 

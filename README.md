@@ -20,7 +20,7 @@ The app features:
 ## Screenshots:
 
 1. **Dashboard**
-   ![Screenshot 1](./app/src/main/res/dashboard.png)
+   ![Dashboard](screenshots/dashboard.png)
 ---
 
 ## 🛠️ Built With

@@ -9,6 +9,7 @@ import android.hardware.SensorManager
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.activity.enableEdgeToEdge
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.spring
 import androidx.compose.foundation.background
@@ -41,7 +42,6 @@ class MainActivity : ComponentActivity(), SensorEventListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         sharedPreferences = getSharedPreferences("stepPrefs", Context.MODE_PRIVATE)
         previousSteps = sharedPreferences.getFloat("previousSteps", 0f)
         history = loadHistory()
@@ -130,7 +130,7 @@ fun StepCounterScreen(steps: Float, onReset: () -> Unit, history: Map<String, In
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text(text = "Steps Taken", style = MaterialTheme.typography.headlineLarge)
+        Text(text = "Steps Taken", style = MaterialTheme.typography.headlineLarge, modifier = Modifier.padding(top = 16.dp))
         Spacer(modifier = Modifier.height(16.dp))
         Text(text = steps.toInt().toString(), style = MaterialTheme.typography.displayMedium)
         Spacer(modifier = Modifier.height(16.dp))
